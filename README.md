@@ -1,26 +1,19 @@
-# README
+# Newsletter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Versions
 
-Things you may want to cover:
+```
+ruby 3.1.0
+Rails 7.0.3.1
+```
 
-* Ruby version
+## Start project
+Copy project, then execs
 
-* System dependencies
+```
+rake db:create
+rake db:migrate
+rails s
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
+Ready :D
