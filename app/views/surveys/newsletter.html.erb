@@ -1,0 +1,9 @@
+<% if @newsletter.present? %>
+  <% unless @newsletter.initial_survey %>
+    <%= render partial: 'form', locals: { questions: @questions } %>
+  <% else  %>
+    <p class="notice"><%=  notice %></p>
+  <% end %>
+<% else  %>
+  <p>Url no existe, contacte a soporte tecnico</p>
+<% end %>

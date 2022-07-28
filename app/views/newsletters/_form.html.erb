@@ -1,0 +1,26 @@
+<% if newsletter.errors.present? %>
+  <h3>Errors...</h3>
+  <ul>
+    <% newsletter.errors.messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<br>
+<%= form_with model: newsletter, data: { turbo: false } do |form| %>
+  <%= form.label 'Email' %>
+  <%= form.email_field :email %>
+  <br>
+  <br>
+  <%= form.label 'Preferences' %>
+  <br>
+  <% preference_types.each do |key, val| %>
+      <label>
+        <%= key %>
+        <%= form.check_box :preferences, { multiple: true }, val, false %>
+      </label>
+      <br>
+  <% end %>
+  <br>
+  <%= form.submit  t 'submit' %>
+<% end %>

@@ -1,0 +1,23 @@
+<center>
+  <div class="content-newsletter">
+    <div>
+      <%= render partial: "logo" %>
+      <br>
+      <div class="content-buttons">
+        <%= link_to 'Ingles', root_path(locale: 'en') %> | <%= link_to 'Español', root_path(locale: 'es') %> | <%= link_to 'Ruso', root_path(locale: 'ru') %>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p class="notice"><%= notice %></p>
+      </div>
+      <h1><%= t 'welcome' %></h1>
+      <h3>
+      <%= t 'description' %>
+      </h3>
+      <p>Suscribe to receive our newsletter.</p>
+    </div>
+
+    <%= render partial: "form", locals: { newsletter: @newsletter, preference_types: @preference_types } %>
+  </div>
+</center>

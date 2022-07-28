@@ -1,0 +1,12 @@
+<%= form_with url: surveys_path, method: :post do |form| %>
+  <% questions.each do |question| %>
+    <p>
+      <%= question.content %>
+      <br>
+      <%= form.text_area :response, required: true %>
+    </p>
+  <% end %>
+  <%= form.hidden_field :code, value: params[:code] %>
+  <br>
+  <%= form.submit %>
+<% end %>

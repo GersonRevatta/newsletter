@@ -1,0 +1,7 @@
+es:
+  welcome: "Bienvenido"
+  submit: 'Enviar'
+  messages:
+    errors:
+      one: "Un error impidió que se guardaran estos comentarios."
+      other: "%{count} los errores impidieron que se guardaran estos comentarios"
